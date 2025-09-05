@@ -18,11 +18,12 @@ body {
   font-family: var(--font-body);
   margin: 0;
 }
-
-.music-hero {
-  background: url('../assets/images/music-hero.jpg') center/cover no-repeat;
-  text-align: center;
-  padding: 6rem 1rem;
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .music-hero h1 {
@@ -63,14 +64,15 @@ body {
 }
 
 .track-card {
-  background: #222;
-  border-radius: 8px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .track-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  /* box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3); */
 }
 
 .track-card img {

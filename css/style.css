@@ -402,64 +402,59 @@ nav.active ~ .mobile-menu-btn i.fa-times {
 
 
 
-
-
 /* ===== HERO SECTION ===== */
+
+/* .hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../assets/images/manchi2.PNG') center/cover no-repeat;
+  background-attachment: fixed;
+} */
 
 .hero {
   position: relative;
+    background: url('../assets/images/manchi2.PNG') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  min-height: 600px;
-  width: 100%;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(120deg, #0e0e0e 60%, #111111 100%);
-   /* border: 2px solid yellow; */
-     /* background-position: contain; */
-      background-attachment: fixed;
-      /* border : 2px solid blue; */
+    background-attachment: fixed;
 }
-  
 
-.hero-overlay {
-  position: absolute ;
-  bottom: 300px;
-  left: 60px;
-  z-index: 2;
+.music-player {
   width: 100%;
-  max-height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* min-height: 70vh; */
-  border:2px solid blue;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
 }
 
-.hero-bg::before {
+
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(18, 18, 34, 0.55); /* Adjust the alpha for more/less darkness */
-  z-index: 2;
-  pointer-events: none;
-}
-.hero-bg {
-  position: relative;
-
-  min-width: 100%; 
-   min-height: 600px;
-  z-index: 1;
-  opacity: 3;
-  background-attachment: fixed;
-  background-size: contain, cover;
-  /* background-position: center center, center center; */
-  /* background-repeat: no-repeat, no-repeat; */
-  border: 2px solid red;
-  margin-bottom: 10px;
+  background: rgba(0,0,0,0.6); /* dark overlay */
 }
 
+.more-text {
+  display: none;
+}
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #FFD700;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.read-more-btn:hover {
+  text-decoration: underline;
+}
 
 @keyframes bgMove {
   0% {
@@ -533,7 +528,7 @@ nav.active ~ .mobile-menu-btn i.fa-times {
   gap: 18px;
   margin: 24px 0 0 0;
   animation: fadeIn 1.5s;
-  margin-top: 140px;
+  margin-top: 10px;
 }
 
 .social-icon a:hover{
@@ -605,12 +600,12 @@ nav.active ~ .mobile-menu-btn i.fa-times {
     margin-top: 100px;
     /* border: 2px solid wheat; */
   }
-  .hero-bg{
+  /* .hero-bg{
     min-height: 500px;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
  
-  }
+  } */
   #hero-title {
     margin-top: 30px;
     font-size: 3.9rem;
@@ -2154,16 +2149,6 @@ footer .social-icons a i {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Music Library Hero Section - Enhanced */
 .page-hero.music-hero {
   padding: 100px 0 100px 0;
@@ -2182,8 +2167,8 @@ footer .social-icons a i {
   background-repeat: no-repeat;
   animation: bgMove 18s linear infinite alternate;
   /* background-position: top center; */
-  background-blend-mode: overlay;
 }
+
 
 @keyframes bgMove {
   0% {

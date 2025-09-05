@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicProfile | Professional Music Portfolio</title>
+    <title>FMG MUSIC</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/videos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -44,8 +44,8 @@
     <button class="hero-nav hero-next"><i class="fas fa-chevron-right"></i></button> -->
     <div class="container hero-overlay">
         <div class="content" id="content">
-            <h1 id="hero-title"></h1>
-            <p id="hero-subtitle"></p>
+            <h1 id="hero-title">Paramanchi</h1>
+            <p id="hero-subtitle">Share paramanchi sound with the world. Stream, download music and videos</p>
             <div class="social-icon">
   <a href="https://facebook.com/share/1KJhPRkHYs/?mibextid=wwXlfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
   <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -65,7 +65,7 @@
 
 </section>
 
-<script>
+<!-- <script>
 document.addEventListener("DOMContentLoaded", function() {
   // Single hero slide data
   const heroSlide = {
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   setHeroSlide();
 });
-</script>
+</script> -->
 
 <section class="blog-section">
   <div class="container blog-flex">
@@ -117,14 +117,18 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> -->
       <div class="blog-content">
         <h3>PARAMANCHI</h3>
-        <p> Paramanchi is dedicated to sharing unique sounds and creative energy with the world. His musical journey began as a teenager, experimenting with beats and melodies on his laptop. Quickly becoming a fan favorite, Paramanchi’s music gained recognition on local radio stations and social media, leading to several acclaimed albums and singles featured in TV shows and movies.
+        <p class="read-more-text"> Paramanchi is dedicated to sharing unique sounds and creative energy with the world. His musical journey began as a teenager, experimenting with beats and melodies on his laptop. Quickly becoming a fan favorite, Paramanchi’s music gained recognition on local radio stations and social media, leading to several acclaimed albums and singles featured in TV shows and movies.
   <br><br>
   His artistry is defined by a passion for self-expression and personal growth, constantly pushing creative boundaries with every new project. The debut single, <strong>‘Ayo’</strong>, followed by <strong>‘Fine Wine’</strong> and the <strong>‘Gentleman’ EP</strong>, marked the start of a remarkable career.
+     <span class="more-text"> 
   <br><br>
-  According to his manager, Olamilekan Abodunrin, the <strong>‘Gratitude’ EP</strong> is the culmination of Paramanchi’s tireless efforts to create a sound that honors his heritage while appealing to a global audience. The project explores themes of love, self-empowerment, and African pride, with lyrics that are both deeply personal and universally relatable.
+  According to his manager, Olamilekan Abodunrin, the <strong>‘Gratitude’ EP</strong>
+is the culmination of Paramanchi’s tireless efforts to create a sound that honors his heritage while appealing to a global audience. The project explores themes of love, self-empowerment, and African pride, with lyrics that are both deeply personal and universally relatable.
   <br><br>
   Tracks like <strong>‘Drip On Drip’</strong> and t he lead single <strong>‘Addicted’</strong> showcase Paramanchi’s mission to move listeners, blending infectious rhythms with heartfelt messages of appreciation and self-love. His music celebrates the simple joys of life, the beauty of being human, and the power of gratitude—making Paramanchi an artist to watch in the Afrobeats scene.
+   </span>
 </p>
+<button class="read-more-btn">Read More</button>
         <!-- <a href="pages/about.html" class="btn primary-btn">Read More</a> -->
     
     <!-- Blog Card 2 -->
@@ -142,6 +146,20 @@ document.addEventListener("DOMContentLoaded", function() {
         <a href="#featured" class="btn primary-btn">See More</a>
       </div>
     
+<script>
+document.querySelectorAll('.read-more-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const text = btn.previousElementSibling.querySelector('.more-text');
+    if (text.style.display === "inline") {
+      text.style.display = "none";
+      btn.textContent = "Read More";
+    } else {
+      text.style.display = "inline";
+      btn.textContent = "Read Less";
+    }
+  });
+});
+</script>
 
     <!-- Blog Card 3 -->
     <!-- <div class="blog-card">
@@ -160,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
    </div>
 </div>
 </section>
+
 
 <section id="featured" class="featured">
   <div class="featured-container">
