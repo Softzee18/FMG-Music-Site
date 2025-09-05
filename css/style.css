@@ -595,27 +595,6 @@ nav.active ~ .mobile-menu-btn i.fa-times { transform: rotate(180deg); }
   transform: translateY(-2px) scale(1.04);
 }
 
-.more-text {
-  display: none; /* hidden by default */
-}
-
-.read-more-btn {
-  background-color: #1a73e8;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  margin-top: 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: 0.3s;
-}
-
-.read-more-btn:hover {
-  background-color: #155ab6;
-}
-
-
 /* ===== FEATURED SECTION ===== */
 .featured {
   padding: 60px 0;
@@ -3620,6 +3599,7 @@ footer .social-icons a i {
     align-items: center;
     text-align: center;
   }
+
   .footer-links {
     flex-direction: column;
     gap: 12px;
@@ -3635,9 +3615,11 @@ footer .social-icons a i {
   .event-card {
     padding: 16px;
   }
-
-  .audio-player {
-    padding: 12px;
+  .event-card h3 {
+    font-size: 1.2rem;
   }
+  .event-card p {
+    font-size: 0.9rem;
+  }        
 }
 
