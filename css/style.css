@@ -409,28 +409,32 @@ nav.active ~ .mobile-menu-btn i.fa-times {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 700px;
+  min-height: 600px;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(120deg, #0e0e0e 60%, #111111 100%);
    /* border: 2px solid yellow; */
-     background-position: contain;
+     /* background-position: contain; */
       background-attachment: fixed;
       /* border : 2px solid blue; */
 }
   
 
 .hero-overlay {
-  position: relative;
+  position: absolute ;
+  bottom: 300px;
+  left: 60px;
   z-index: 2;
   width: 100%;
+  max-height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   /* min-height: 70vh; */
-  /* border:2px solid blue; */
+  border:2px solid blue;
 }
 
 .hero-bg::before {
@@ -443,15 +447,19 @@ nav.active ~ .mobile-menu-btn i.fa-times {
 }
 .hero-bg {
   position: relative;
-  width: 100%; 
-   min-height: 800px;
+
+  min-width: 100%; 
+   min-height: 600px;
   z-index: 1;
   opacity: 3;
   background-attachment: fixed;
-  /* border: 2px solid red; */
+  background-size: contain, cover;
+  /* background-position: center center, center center; */
+  /* background-repeat: no-repeat, no-repeat; */
+  border: 2px solid red;
   margin-bottom: 10px;
-
 }
+
 
 @keyframes bgMove {
   0% {
@@ -596,6 +604,13 @@ nav.active ~ .mobile-menu-btn i.fa-times {
     padding: 40px 8px 40px 8px;
     margin-top: 100px;
     /* border: 2px solid wheat; */
+  }
+  .hero-bg{
+    min-height: 500px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+
+    
   }
   #hero-title {
     margin-top: 30px;
