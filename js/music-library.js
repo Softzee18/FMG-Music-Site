@@ -585,3 +585,52 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initial dot
   setActiveDot(0);
 });
+
+// ================= Hero Background Rotation =================
+// Hero Slider JS
+const slider = document.querySelector('.hero-slider');
+let slideIndex = 0;
+const totalSlides = slider.children.length;
+
+function slideHero() {
+    slideIndex = (slideIndex + 1) % totalSlides;
+    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+setInterval(slideHero, 5000);
+
+
+
+// ================= Audio Player =================
+const player = document.getElementById('global-player');
+const playPauseBtn = document.getElementById('play-pause');
+let audio = new Audio();
+let currentTrackIndex = 0;
+const tracks = Array.from(document.querySelectorAll('.track-card'));
+
+function loadTrack(trackCard) {
+    const url = trackCard.dataset.url;
+    const title = trackCard.dataset.title;
+    const artist = trackCard.dataset.artist;
+    const thumbnail = trackCard.dataset.thumbnail;
+
+    audio.src = url;
+    document.getElementById('player-title').innerText = title;
+    document.getElementById('player-artist').innerText = artist;
+    document.getElementById('player-thumbnail').src = thumbnail;
+    audio.play();
+    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+}
+
+tracks.forEach(trackCard => {
+    trackCard.querySelector('.play-btn').addEventListener('click', () => {
+        loadTrack(trackCard);
+    });
+});
+
+playPauseBtn.addEventListener('click', () => {if (audio.paused) {audio.play(); playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';} else {audio.pause(); playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';}});
+
+audio.addEventListener('ended', () => {
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+    loadTrack(tracks[currentTrackIndex]);
+});
