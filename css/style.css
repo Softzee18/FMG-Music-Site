@@ -3599,10 +3599,10 @@ footer .social-icons a i {
     align-items: center;
     text-align: center;
   }
-
-  .audio-player {
+  .footer-links {
     flex-direction: column;
     gap: 12px;
+    margin-top: 16px;
   }
 }
 
