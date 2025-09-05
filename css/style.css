@@ -418,6 +418,7 @@ nav.active ~ .mobile-menu-btn i.fa-times {
    /* border: 2px solid yellow; */
      background-position: contain;
       background-attachment: fixed;
+      /* border : 2px solid blue; */
 }
   
 
@@ -429,7 +430,7 @@ nav.active ~ .mobile-menu-btn i.fa-times {
   align-items: center;
   justify-content: center;
   /* min-height: 70vh; */
-  background-attachment: fixed;
+  /* border:2px solid blue; */
 }
 
 .hero-bg::before {
@@ -444,10 +445,11 @@ nav.active ~ .mobile-menu-btn i.fa-times {
   position: relative;
   width: 100%; 
    min-height: 800px;
-  background-position: contain;
   z-index: 1;
   opacity: 3;
   background-attachment: fixed;
+  /* border: 2px solid red; */
+  margin-bottom: 10px;
 
 }
 
@@ -681,7 +683,7 @@ nav.active ~ .mobile-menu-btn i.fa-times {
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  border:2px solid red;
+  /* border:2px solid red; */
   
 }
 
