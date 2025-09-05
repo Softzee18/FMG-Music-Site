@@ -14,7 +14,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="../assets/images/logo.png" alt="MusicProfile Logo">
+                <img src="../assets/images/logo.PNG" alt="MusicProfile Logo">
                 <h1>ParamanchiMusic</h1>
             </div>
             <nav>
@@ -42,7 +42,31 @@
             </div>
 
             <div class="contact-content">
-                <div class="contact-info">
+
+                <div class="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/xjkypgee" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+      
+
+         <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
@@ -76,29 +100,6 @@
                     </div>
                 </div>
 
-                <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/xjkypgee" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Map Section -->
@@ -111,19 +112,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="../assets/images/logo.png" alt="MusicProfile Logo">
+                    <img src="../assets/images/logo.PNG" alt="MusicProfile Logo">
                     <h2>ParamanchiMusic</h2>
                 </div>
-                <!-- <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="music.html">Music</a></li>
-                        <li><a href="videos.html">Videos</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div> -->
+              
                 <div class="footer-social">
                     <!-- <h3>Connect</h3> -->
                     <div class="social-icons">
