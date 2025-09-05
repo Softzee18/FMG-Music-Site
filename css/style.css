@@ -423,10 +423,7 @@ nav.active ~ .mobile-menu-btn i.fa-times {
   display: flex;
   align-items: center;
   justify-content: center;
-    background-attachment: fixed;
-  animation: bgMove 20s infinite alternate;
-  
-
+    background-attachment: fixed;  
 }
 
 .music-player {
