@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MusicProfile</title>
+    <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/videos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="MusicProfile Logo">
+                <h1>ParamanchiMusic</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <!-- <h2 style="color: #9d46ff;">Get <span style="color: #6200ea;">In</span> <span style="color: #00b2cc;">Touch!</span></h2> -->
+                <h2>Get in Touch!</h2>
+                <p>Have questions? We'd love to hear from you.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>123 Music Street<br>Los Angeles, CA 90028</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+2349030295657</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>paramanchibookings@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-spotify"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/xjkypgee" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div id="map"></div>
+    </section>
+
+       <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="MusicProfile Logo">
+                    <h2>ParamanchiMusic</h2>
+                </div>
+                <!-- <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer-social">
+                    <!-- <h3>Connect</h3> -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                        <a href="#"><i class="fas fa-music"></i></a> <!-- Added audio-mark icon -->
+                        <!-- <a href="#" target="_blank" aria-label="Audiomack"><img src="assets/images/audiomack.png" alt="Audiomack" style="width:22px;height:22px;vertical-align:middle;"></a> -->
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <!-- <h4>Contact</h4> -->
+                    <p><i class="fas fa-envelope"></i> paramanchibookings@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +2349030295657</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paramanchi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaeggJJhXZ4WT1cJiSEY1WOIzeyIwT1Z4&callback=initMap" async defer></script>
+    <script>
+        // Initialize Google Map
+        function initMap() {
+            // The location of your business
+            const location = { lat: 6.5244, lng: 3.3792 }; // Lagos coordinates (change to your actual location)
+//             Location Coordinates: The coordinates (6.5244, 3.3792) are for Lagos, Nigeria, but your address text shows Los Angeles. You should update either:
+// The coordinates to match Los Angeles (approximately 34.0522, -118.2437)          
+            // The map, centered at your location
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: location,
+                styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#212121"}]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [{"visibility": "off"}]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#757575"}]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{"color": "#212121"}]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#757575"}]
+                    },
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#9e9e9e"}]
+                    },
+                    {
+                        "featureType": "administrative.locality",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#bdbdbd"}]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#757575"}]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#181818"}]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#616161"}]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{"color": "#1b1b1b"}]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.fill",
+                        "stylers": [{"color": "#2c2c2c"}]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#8a8a8a"}]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#373737"}]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#3c3c3c"}]
+                    },
+                    {
+                        "featureType": "road.highway.controlled_access",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#4e4e4e"}]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#616161"}]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#757575"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#000000"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#3d3d3d"}]
+                    }
+                ]
+            });
+            
+            // The marker, positioned at your location
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "ParamanchiMusic",
+                animation: google.maps.Animation.DROP
+            });
+            
+            // Info window with your business details
+            const contentString = `
+                <div class="map-info-window">
+                    <h3>ParamanchiMusic</h3>
+                    <p>123, Music Street<br>Leeki, V.I, Chevron</p>
+                    <p><a href="tel:+2349030295657">+2349030295657</a></p>
+                </div>
+            `;
+            
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
+            
+            marker.addListener("click", () => {
+                infowindow.open(map, marker);
+            });
+            
+            // Open info window by default
+            infowindow.open(map, marker);
+        }
+
+        // Add this at the end of your script section
+window.gm_authFailure = function() {
+    document.getElementById('map').innerHTML = '<div class="map-error">Could not load Google Maps. Please try again later.</div>';
+};
+
+    </script>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

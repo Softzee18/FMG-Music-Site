@@ -1,0 +1,161 @@
+/* music.css — Professional Golden Theme */
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #FFD700;
+  --text-light: #fff;
+  --text-muted: #aaa;
+  --bg-dark: #111;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+.music-hero {
+  background: url('../assets/images/music-hero.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.music-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--secondary-color);
+}
+
+.music-hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.track-filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--secondary-color);
+  background: transparent;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.filter.active, .filter:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.track-card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+}
+
+.track-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.track-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.track-info h3 {
+  color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+.track-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.track-actions button {
+  background: transparent;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .track-filters {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .music-hero h1 {
+    font-size: 2rem;
+  }
+
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Global Audio Player Styling */
+.global-audio-player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  display: none;
+  padding: 1rem;
+  border-top: 1px solid #FFD700;
+  z-index: 999;
+  transition: transform 0.4s ease;
+}
+
+.global-audio-player.visible {
+  display: block;
+}
+
+.global-audio-player .player-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.global-audio-player h4,
+.global-audio-player p {
+  margin: 0;
+}
+
+#global-player {
+  flex: 1;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Videos | Paramanchi Music</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/videos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="Paramanchi Logo" />
+        <h1>ParamanchiMusic</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="videos.html" class="active">Videos</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+  <section class="featured-video">
+    <div class="container">
+      <h2>Featured Video</h2>
+      <div class="video-wrapper">
+<iframe
+  id="main-video"
+  src="https://www.youtube.com/embed/C57fw2PrPkg"
+  title="Featured Video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+     </div>
+    </div>
+  </section>
+      <div class="video-info">
+        <h3>Paramanchi videos Concert</h3>
+        <p>Experience the energy and passion of our live performances.</p>
+      </div>
+
+      <section class="video-gallery">
+  <div class="container">
+    <div class="video-filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="music">Music Videos</button>
+      <button class="filter" data-filter="live">Live</button>
+      <button class="filter" data-filter="bts">Behind-the-Scenes</button>
+      <button class="filter" data-filter="interviews">Interviews</button>
+    </div>
+    <div class="video-grid">
+      <div class="video-card" data-category="music" data-src="https://youtu.be/gHggjhA6o9c?si=gIu769BvYEmYVkqb">
+        <img src="https://img.youtube.com/vi/gHggjhA6o9c/hqdefault.jpg" alt="Golden Jam" />
+            <h3>Freedom Video</h3>
+      </div>
+      <div class="video-card" data-category="live" data-src="https://youtu.be/vKkIufAssqM?si=aCPkeDjEUyeqLSeX">
+         <img src="https://img.youtube.com/vi/vKkIufAssqM/hqdefault.jpg" alt="Live in Lagos" />
+        <h3>Live in Lagos</h3>
+      </div>
+      <div class="video-card hidden" data-category="music" data-src="https://youtu.be/PhOXrYH8QOk?si=rjvA9jiGlUIbDRSR">
+         <img src="https://img.youtube.com/vi/PhOXrYH8QOk/hqdefault.jpg" alt="Gbono Video" />
+         <h3>Gbono Video</h3>
+      </div>
+      <div class="video-card" data-category="bts" data-src="https://youtu.be/E5Fh891rV8s?si=2USfJF87oqg_O90q">
+         <img src="https://img.youtube.com/vi/E5Fh891rV8s/hqdefault.jpg" alt="Studio BTS" />
+        <h3>Studio BTS</h3>
+      </div>
+      <div class="video-card" data-category="interviews" data-src="https://youtu.be/_Ebwcr7elkY?si=9Puxyk4VNSVD1kxb">
+         <img src="https://img.youtube.com/vi/_Ebwcr7elkY/hqdefault.jpg" alt="Artist Talk" />
+        <h3>Artist Talk</h3>
+      </div>
+      <div class="video-card" data-category="music" data-src="https://youtu.be/M_h2sf3OBCE?si=qfhF5EDu5crgAJ2T">
+         <img src="https://img.youtube.com/vi/M_h2sf3OBCE/hqdefault.jpg" alt="Flower Video" />
+         <h3>Flower Video</h3>
+      </div>
+      <div class="video-grid">
+      <div class="video-card" data-category="music" data-src="https://youtu.be/7UwKU2NB9bI?si=Q_C5QM48DMnEqrSY">
+         <img src="https://img.youtube.com/vi/7UwKU2NB9bI/hqdefault.jpg" alt="International" />
+            <h3>International</h3>
+      </div>
+      </div>
+      <div class="video-grid hidden">
+      <div class="video-card" data-category="music" data-src="https://youtu.be/EUc-uMcWMJY?si=0KetNdPt2ej0o3-F">
+           <img src="https://img.youtube.com/vi/EUc-uMcWMJY/hqdefault.jpg" alt="Gratitude Video" />
+            <h3>Gratitude Video</h3>
+      </div>
+      </div>
+      <div class="video-card" data-category="live" data-src="https://youtu.be/g8_nvGbauJQ?si=dvOi2KEL30TVHABB">
+        <img src="https://img.youtube.com/vi/g8_nvGbauJQ/hqdefault.jpg" alt="Live Performance" />
+        <h3>Live Performance</h3>
+      </div>
+      <div class="video-card hidden" data-category="music" data-src="https://youtu.be/FO-SLi1HDI8?si=ETwo9BQ4PUAvN5g9">
+        <img src="https://img.youtube.com/vi/FO-SLi1HDI8/hqdefault.jpg" alt="Expensive Video" />
+        <h3>Expensive Video</h3>
+      </div>
+    </div>
+    <div class="show-more-wrap" style="text-align:center; margin-top: 2rem;">
+      <button id="show-more-btn">view more</button>
+    </div>
+  </div>
+</section>
+
+     <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="MusicProfile Logo">
+                    <h2>ParamanchiMusic</h2>
+                </div>
+                <!-- <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer-social">
+                    <!-- <h3>Connect</h3> -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                        <a href="#"><i class="fas fa-music"></i></a> <!-- Added audio-mark icon -->
+                        <!-- <a href="#" target="_blank" aria-label="Audiomack"><img src="assets/images/audiomack.png" alt="Audiomack" style="width:22px;height:22px;vertical-align:middle;"></a> -->
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <!-- <h4>Contact</h4> -->
+                    <p><i class="fas fa-envelope"></i> paramanchibookings@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +2349030295657</p>
+                </div>
+            </div>         
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paramanchi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/videos.js"></script>
+    <script src="../js/music.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,375 @@
+/* Updated Professional CSS with Golden Accents and Responsive Enhancements */
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #FFD700; /* Gold */
+  --background-dark: #111;
+  --text-primary: #fff;
+  --text-secondary: #ccc;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+   --gold: #D4AF37;
+  --gold-light: #F6E27F;
+  --gold-dark: #B8860B;
+  --background-dark: #111;
+  --text-light: #f4f4f4;
+  --transition-normal: 0.3s ease;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --transition-normal: all 0.3s ease;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+
+
+/* ====== ABOUT HERO ====== */
+.about-hero {
+  position: relative;
+  z-index: 1;
+  border: 2px solid white; 
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('path/to/your/image.jpg') no-repeat center center/cover;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+   /* border: 2px solid white; */
+}
+
+/* About Hero Section */
+.slider-hero {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  color: gold;
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  color: #eee;
+}
+
+/* Optional: dark overlay */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+
+/* Artist Bio */
+.artist-bio .bio-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  align-items: center;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  padding-top: 60px;
+  background-size: cover;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.artist-bio .bio-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.artist-bio .bio-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.stat-item {
+  background: #222;
+  padding: var(--spacing-sm);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+
+/* ====== TESTIMONIALS ====== */
+.testimonials {
+  background-color: var(--background-dark);
+  padding: var(--spacing-lg) 0;
+}
+
+.testimonial-card {
+  background: #222;
+  border-left: 4px solid var(--gold);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 4px;
+}
+
+.testimonial-author h4 {
+  color: var(--gold);
+}
+
+.testimonial-author p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ====== CTA ====== */
+.cta-section {
+  background-color: #000;
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.btn.primary-btn {
+  background-color: var(--gold);
+  color: #111;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.primary-btn:hover {
+  background-color: var(--gold-dark);
+  transform: translateY(-2px);
+}
+
+/* ====== TIMELINE ====== */
+.journey-timeline {
+  background: #000;
+  padding: var(--spacing-lg) 0;
+}
+
+.timeline-item {
+  border-left: 3px solid var(--gold);
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--gold);
+  border-radius: 50%;
+  position: relative;
+  top: 6px;
+  left: -9px;
+}
+
+
+/* Skills & Equipment */
+.skills-equipment .skills-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+}
+
+.skills {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.skill-bars .skill-item {
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-secondary);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background: var(--secondary-color);
+  transition: width 1s ease-in-out;
+}
+
+.equipment ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.equipment li {
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.equipment i {
+  color: var(--secondary-color);
+}
+
+.equipment-list {
+  list-style: none;
+  padding: 0;
+  color: var(--gold);
+}
+
+.equipment-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.equipment-list li i {
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: var(--text-secondary);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+footer a:hover {
+  color: var(--gold-dark);
+}
+footer a:hover i {
+  color: var(--gold-dark);
+}
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+footer .social-icons a {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  transition: color var(--transition-normal);
+}
+footer .social-icons a:hover {
+  color: var(--gold);
+}
+footer .social-icons a:hover i {
+  color: var(--gold-dark);
+}
+footer .social-icons a i {
+  color: var(--gold);
+  transition: color var(--transition-normal);
+}
+footer .social-icons a i:hover {
+  color: var(--gold-dark);
+}
+
+
+/* Responsive Fixes */
+@media (min-width: 768px) {
+  .artist-bio .bio-content {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .skills-equipment .skills-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .skills, .equipment {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-name {
+    font-size: 0.8rem;
+  }
+
+  .stat-number {
+    font-size: 1.2rem;
+  }
+}
+
+/* ====== RESPONSIVENESS ====== */
+@media (min-width: 768px) {
+  .bio-content {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+    text-align: left;
+  }
+
+  .skills-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .skills, .equipment {
+    flex: 1;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Paramanchi Music</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h2>Admin Panel</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#dashboard" class="nav-link active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#music" class="nav-link" data-tab="music"><i class="fas fa-music"></i> Music</a></li>
+                    <li><a href="#videos" class="nav-link" data-tab="videos"><i class="fas fa-video"></i> Videos</a></li>
+                    <li><a href="#events" class="nav-link" data-tab="events"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="#comments" class="nav-link" data-tab="comments"><i class="fas fa-comments"></i> Comments</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn danger-btn" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="admin-main">
+            <div class="admin-header">
+                <h1 id="page-title">Dashboard</h1>
+                <div class="user-info">
+                    <span id="user-email">admin@paramanchi.com</span>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <!-- Dashboard Tab -->
+                <div class="tab-content active" id="dashboard-tab">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-music">0</h3>
+                                <p>Total Tracks</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-videos">0</h3>
+                                <p>Total Videos</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-events">0</h3>
+                                <p>Total Events</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-comments">0</h3>
+                                <p>Total Comments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Tab -->
+                <div class="tab-content" id="music-tab">
+                    <div class="tab-header">
+                        <h2>Music Management</h2>
+                        <button class="btn primary-btn" id="add-music-btn">
+                            <i class="fas fa-plus"></i> Add New Track
+                        </button>
+                    </div>
+
+                    <div class="content-list" id="music-list">
+                        <!-- Music items will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Videos Tab -->
+                <div class="tab-content" id="videos-tab">
+                    <div class="tab-header">
+                        <h2>Video Management</h2>
+                        <button class="btn primary-btn" id="add-video-btn">
+                            <i class="fas fa-plus"></i> Add New Video
+                        </button>
+                    </div>
+
+                    <div class="content-list" id="videos-list">
+                        <!-- Video items will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Events Tab -->
+                <div class="tab-content" id="events-tab">
+                    <div class="tab-header">
+                        <h2>Event Management</h2>
+                        <button class="btn primary-btn" id="add-event-btn">
+                            <i class="fas fa-plus"></i> Add New Event
+                        </button>
+                    </div>
+
+                    <div class="content-list" id="events-list">
+                        <!-- Event items will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Comments Tab -->
+                <div class="tab-content" id="comments-tab">
+                    <div class="tab-header">
+                        <h2>Comments & Feedback</h2>
+                    </div>
+
+                    <div class="content-list" id="comments-list">
+                        <!-- Comments will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Music Upload Modal -->
+    <div class="modal" id="music-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Track</h3>
+                <button class="close-btn" data-modal="music-modal">&times;</button>
+            </div>
+            <form id="music-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="music-title">Track Title</label>
+                    <input type="text" id="music-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="music-artist">Artist</label>
+                    <input type="text" id="music-artist" name="artist" value="Paramanchi" required>
+                </div>
+                <div class="form-group">
+                    <label for="music-genre">Genre</label>
+                    <select id="music-genre" name="genre" required>
+                        <option value="">Select Genre</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="hip-hop">Hip Hop</option>
+                        <option value="r-b">R&B</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="music-album">Album</label>
+                    <input type="text" id="music-album" name="album">
+                </div>
+                <div class="form-group">
+                    <label for="audio-file">Audio File</label>
+                    <input type="file" id="audio-file" name="audio_file" accept="audio/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover-file">Cover Image</label>
+                    <input type="file" id="cover-file" name="cover_file" accept="image/*" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary-btn" data-modal="music-modal">Cancel</button>
+                    <button type="submit" class="btn primary-btn">Upload Track</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Video</h3>
+                <button class="close-btn" data-modal="video-modal">&times;</button>
+            </div>
+            <form id="video-form">
+                <div class="form-group">
+                    <label for="video-title">Video Title</label>
+                    <input type="text" id="video-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="video-url">Video URL (YouTube)</label>
+                    <input type="url" id="video-url" name="video_url" required placeholder="https://youtu.be/...">
+                </div>
+                <div class="form-group">
+                    <label for="video-thumbnail">Thumbnail URL</label>
+                    <input type="url" id="video-thumbnail" name="thumbnail_url" required>
+                </div>
+                <div class="form-group">
+                    <label for="video-category">Category</label>
+                    <select id="video-category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="music">Music Videos</option>
+                        <option value="live">Live Performances</option>
+                        <option value="bts">Behind-the-Scenes</option>
+                        <option value="interviews">Interviews</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="video-description">Description</label>
+                    <textarea id="video-description" name="description" rows="3"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary-btn" data-modal="video-modal">Cancel</button>
+                    <button type="submit" class="btn primary-btn">Add Video</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div class="modal" id="event-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Event</h3>
+                <button class="close-btn" data-modal="event-modal">&times;</button>
+            </div>
+            <form id="event-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="event-title">Event Title</label>
+                    <input type="text" id="event-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-description">Description</label>
+                    <textarea id="event-description" name="description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="event-location">Location</label>
+                    <input type="text" id="event-location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Event Date</label>
+                    <input type="date" id="event-date" name="event_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-time">Event Time</label>
+                    <input type="time" id="event-time" name="event_time" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-image">Event Image (Optional)</label>
+                    <input type="file" id="event-image" name="image_file" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="ticket-url">Ticket URL (Optional)</label>
+                    <input type="url" id="ticket-url" name="ticket_url" placeholder="https://...">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary-btn" data-modal="event-modal">Cancel</button>
+                    <button type="submit" class="btn primary-btn">Create Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

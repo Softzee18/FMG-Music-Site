@@ -1,0 +1,45 @@
+#uploads-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.upload-card {
+  background: #23233a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(98,0,234,0.10);
+  width: 260px;
+  position: relative;
+}
+.upload-card button {
+  margin: 6px 4px 0 0;
+  background: #9d46ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.upload-card button:hover {
+  background: #00b2cc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: #23233a;
+  color: #fff;
+  margin: 60px auto;
+  padding: 32px;
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+}
