@@ -115,20 +115,21 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="blog-image">
         <img src="assets/images/manchi2.PNG" alt="About Paramanchi">
       </div> -->
-      <div class="blog-content">
-        <h3>PARAMANCHI</h3>
-        <p class="read-more-text"> Paramanchi is dedicated to sharing unique sounds and creative energy with the world. His musical journey began as a teenager, experimenting with beats and melodies on his laptop. Quickly becoming a fan favorite, Paramanchi’s music gained recognition on local radio stations and social media, leading to several acclaimed albums and singles featured in TV shows and movies.
-  <br><br>
-  His artistry is defined by a passion for self-expression and personal growth, constantly pushing creative boundaries with every new project. The debut single, <strong>‘Ayo’</strong>, followed by <strong>‘Fine Wine’</strong> and the <strong>‘Gentleman’ EP</strong>, marked the start of a remarkable career.
-     <span class="more-text"> 
-  <br><br>
-  According to his manager, Olamilekan Abodunrin, the <strong>‘Gratitude’ EP</strong>
-is the culmination of Paramanchi’s tireless efforts to create a sound that honors his heritage while appealing to a global audience. The project explores themes of love, self-empowerment, and African pride, with lyrics that are both deeply personal and universally relatable.
-  <br><br>
-  Tracks like <strong>‘Drip On Drip’</strong> and t he lead single <strong>‘Addicted’</strong> showcase Paramanchi’s mission to move listeners, blending infectious rhythms with heartfelt messages of appreciation and self-love. His music celebrates the simple joys of life, the beauty of being human, and the power of gratitude—making Paramanchi an artist to watch in the Afrobeats scene.
-   </span>
-</p>
-<button class="read-more-btn">Read More</button>
+    <div class="blog-content">
+  <h3>PARAMANCHI</h3>
+  <p class="read-more-text">
+    Paramanchi is dedicated to sharing unique sounds and creative energy with the world. His musical journey began as a teenager, experimenting with beats and melodies on his laptop. Quickly becoming a fan favorite, Paramanchi’s music gained recognition on local radio stations and social media, leading to several acclaimed albums and singles featured in TV shows and movies.
+    <br><br>
+    His artistry is defined by a passion for self-expression and personal growth, constantly pushing creative boundaries with every new project. The debut single, <strong>‘Ayo’</strong>, followed by <strong>‘Fine Wine’</strong> and the <strong>‘Gentleman’ EP</strong>, marked the start of a remarkable career.
+    <span class="more-text">
+      <br><br>
+      According to his manager, Olamilekan Abodunrin, the <strong>‘Gratitude’ EP</strong> is the culmination of Paramanchi’s tireless efforts to create a sound that honors his heritage while appealing to a global audience. The project explores themes of love, self-empowerment, and African pride, with lyrics that are both deeply personal and universally relatable.
+      <br><br>
+      Tracks like <strong>‘Drip On Drip’</strong> and the lead single <strong>‘Addicted’</strong> showcase Paramanchi’s mission to move listeners, blending infectious rhythms with heartfelt messages of appreciation and self-love. His music celebrates the simple joys of life, the beauty of being human, and the power of gratitude—making Paramanchi an artist to watch in the Afrobeats scene.
+    </span>
+  </p>
+  <button class="read-more-btn">Read More</button>
+</div>
         <!-- <a href="pages/about.html" class="btn primary-btn">Read More</a> -->
     
     <!-- Blog Card 2 -->
@@ -147,15 +148,15 @@ is the culmination of Paramanchi’s tireless efforts to create a sound that hon
       </div>
     
 <script>
-document.querySelectorAll('.read-more-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const text = btn.previousElementSibling.querySelector('.more-text');
-    if (text.style.display === "inline") {
-      text.style.display = "none";
-      btn.textContent = "Read More";
+document.querySelectorAll(".read-more-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const moreText = button.previousElementSibling.querySelector(".more-text");
+    if (moreText.style.display === "inline" || moreText.style.display === "block") {
+      moreText.style.display = "none";
+      button.textContent = "Read More";
     } else {
-      text.style.display = "inline";
-      btn.textContent = "Read Less";
+      moreText.style.display = "inline";
+      button.textContent = "Read Less";
     }
   });
 });
