@@ -426,4 +426,16 @@ track-card {
         display: flex;
         margin-left: auto;
     }
+    .genere-filter select {
+        width: 40%;
+        margin-top: 0.5rem;
+        display: flex;
+        margin-left: auto;  
+    }
+    .sort-by select {
+        width: 40%;
+        margin-top: 0.5rem;
+        display: flex;
+        margin-left: auto;  
+    }
 }
