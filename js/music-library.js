@@ -711,8 +711,7 @@ function slideHero() {
 }
 
 setInterval(slideHero, 5000);
-
-
+// ================= End Hero Background Rotation =================
 
 // ================= Audio Player =================
 const player = document.getElementById('global-player');
@@ -748,3 +747,13 @@ audio.addEventListener('ended', () => {
     loadTrack(tracks[currentTrackIndex]);
 });
 // ================= End Audio Player =================
+
+// ================= Loading Screen =================
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loading-screen');   
+    setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+    }, 500);
+});
+

@@ -1,6 +1,6 @@
 // DOM Elements
 const header = document.querySelector('header');
-const newsletterForm = document.querySelector('.newsletter-form');
+// const newsletterForm = document.querySelector('.newsletter-form');
 
 //Mobile Togle 
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -47,46 +47,45 @@ if (mobileMenuBtn && nav) {
   
 }
 
+// ================= Newsletter Subscription =================
+const newsletterForm = document.getElementById('newsletter-form');
+const emailInput = document.getElementById('email-input');  
+const messageDiv = document.getElementById('subscription-message');
 
-// Newsletter Form
-if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        if (!emailInput) return;
-        const email = emailInput.value;
-        try {
-            await subscribeToNewsletter(email);
-            showNotification("Success! You've been subscribed to our newsletter.", 'success');
-            newsletterForm.reset();
-        } catch (error) {
-            showNotification('Oops! Something went wrong. Please try again.', 'error');
-        }
-    });
+newsletterForm.addEventListener('submit', function(e) { 
+    e.preventDefault();
+    const email = emailInput.value;
+    if (validateEmail(email)) {
+        // Simulate successful subscription
+        messageDiv.style.color = 'green';
+        messageDiv.innerText = 'Thank you for subscribing!';
+        emailInput.value = '';
+    } else {
+        messageDiv.style.color = 'red';
+        messageDiv.innerText = 'Please enter a valid email address.';
+    }
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
 }
+// ================= End Newsletter Subscription =================
 
-function showNotification(message, type) {
+// ================= Notification System =================
+function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
-    notification.innerHTML = `<p>${message}</p><button class="notification-close">&times;</button>`;
-    document.body.appendChild(notification);
-    setTimeout(() => notification.remove(), 5000);
-    notification.querySelector('.notification-close')?.addEventListener('click', () => notification.remove());
-}
+    notification.innerText = message;
 
-function subscribeToNewsletter(email) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (Math.random() < 0.5) {
-                resolve(); 
-                showNotification('You have been subscribed to our newsletter.', 'success');
-            } else {
-                reject('Failed to subscribe to newsletter.');
-                showNotification('Oops! Something went wrong. Please try again.', 'error');
-            }
-        }, 1000);
-    });
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.classList.add('fade-out');
+        notification.addEventListener('transitionend', () => notification.remove());
+    }, 3000);
 }
+// ================= End Notification System =================
 
 // Upload Modal
 const uploadModal = document.getElementById('upload-modal');
@@ -214,3 +213,5 @@ if ('IntersectionObserver' in window) {
     
     lazyImages.forEach(img => imageObserver.observe(img));
 }
+
+// ================= Music Library Pagination =================
