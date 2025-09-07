@@ -423,10 +423,8 @@ track-card {
     .filter-options select {
         width: 60%;
         margin-top: 0.5rem;
-    }
-    .page-numbers span {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.9rem;
-        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
     }
 }
