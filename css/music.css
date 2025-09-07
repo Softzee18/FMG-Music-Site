@@ -405,17 +405,16 @@ track-card {
         margin-left: 0;
         margin-top: 0.5rem;
     }
+        .filter-options select {
+        width: 100%;
+        margin-top: 0.5rem;
+        display: flex;
+        margin-left: auto;
+    }
 }
 @media screen and (max-width: 480px) {
     .music-hero h1 {
         font-size: 1.5rem;
-    }
-
-    .search-bar {
-        flex-direction: row;
-        align-items: stretch;
-        gap: 0.5rem;
-        border: 2px solid red;
     }
 
     .music-hero p {
@@ -423,24 +422,14 @@ track-card {
     }
 
     .music-library .search-bar input {
-        width: 40%;
+        width: 60%;
         margin-bottom: 0.5rem;
     }
 
     .filter-options select {
-        width: 40%;
+        width: 100%;
         margin-top: 0.5rem;
         display: flex;
         margin-left: auto;
-         display: flex;
-        margin-left: auto; 
-        flex-direction: row;
-        align-items: stretch;
-        gap: 0.5rem;
-        
-    }
-    .album-card {
-        min-width: 120px;
-        margin-right: 0.5rem;
     }
 }
