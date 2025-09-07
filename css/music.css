@@ -130,29 +130,6 @@ header {
     border: 1px solid var(--secondary);
 }
 
-@media screen and (max-width: 1024px) {
-    .music-library .search-bar input {
-        width: 100px;
-
-    }
-    
-}
-
-@media screen and (max-width: 768px) {
-    .music-library .library-controls {
-        flex-direction: column;
-    }
-    .search-bar {
-        justify-content: center;
-    }
-    
-
-    .filter-options select {
-        margin-left: 0;
-        margin-top: 0.5rem;
-    }       
-        
-}
 .pagination {
     display: flex;
     justify-content: center;
@@ -439,7 +416,7 @@ track-card {
     }
 
     .music-library .search-bar input {
-        width: 100%;
+        width: 60%;
         margin-bottom: 0.5rem;
     }
 
