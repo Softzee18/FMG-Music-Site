@@ -412,7 +412,7 @@ track-card {
     }
 
     .search-bar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: stretch;
         gap: 0.5rem;
         border: 2px solid red;
