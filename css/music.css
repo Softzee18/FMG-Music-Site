@@ -132,7 +132,8 @@ header {
 
 @media screen and (max-width: 1024px) {
     .music-library .search-bar input {
-        width: 200px;
+        width: 100px;
+
     }
     
 }
@@ -141,6 +142,10 @@ header {
     .music-library .library-controls {
         flex-direction: column;
     }
+    .search-bar {
+        justify-content: center;
+    }
+    
 
     .filter-options select {
         margin-left: 0;

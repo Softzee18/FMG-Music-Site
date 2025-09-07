@@ -457,7 +457,7 @@ nav.active ~ .mobile-menu-btn i.fa-times { transform: rotate(180deg); }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 100vh; /* smaller height on tablets/phones */
+    min-height: 80vh; /* smaller height on tablets/phones */
   }
 
   .hero h1 {
@@ -468,7 +468,7 @@ nav.active ~ .mobile-menu-btn i.fa-times { transform: rotate(180deg); }
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 
   .hero h1 {
