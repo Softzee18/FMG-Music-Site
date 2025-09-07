@@ -416,15 +416,14 @@ track-card {
     }
 
     .music-library .search-bar input {
-        width: 60%;
+        width: 40%;
         margin-bottom: 0.5rem;
     }
 
     .filter-options select {
-        width: 60%;
+        width: 40%;
         margin-top: 0.5rem;
-        display: block;
+        display: flex;
         margin-left: auto;
-        margin-right: auto; 
     }
 }
