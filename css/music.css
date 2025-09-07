@@ -432,22 +432,15 @@ track-card {
         margin-top: 0.5rem;
         display: flex;
         margin-left: auto;
-        
-    }
-    .genere-filter  {
-        width: 40%;
-        margin-top: 0.5rem;
-        display: flex;
+         display: flex;
         margin-left: auto; 
         flex-direction: row;
         align-items: stretch;
         gap: 0.5rem;
-        border: 2px solid red; 
+        
     }
-    .sort-by {
-        width: 40%;
-        margin-top: 0.5rem;
-        display: flex;
-        margin-left: auto;  
+    .album-card {
+        min-width: 120px;
+        margin-right: 0.5rem;
     }
 }
