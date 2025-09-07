@@ -2171,6 +2171,7 @@ footer .social-icons a i {
   max-width: 1500px;
   margin: 0 auto;
   padding: 20px 15px;
+  /* border: 2px solid red; */
 }
 
 .music-grid {
@@ -2186,6 +2187,7 @@ footer .social-icons a i {
 .track-card {
   flex: 0 0 calc(100% / 8 - 15px); /* exactly 8 visible per row */
   scroll-snap-align: start;
+   border: 0.5px solid wheat;
 }
 /* Hide scrollbar but keep scroll */
 .music-grid {
