@@ -457,7 +457,7 @@ nav.active ~ .mobile-menu-btn i.fa-times { transform: rotate(180deg); }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh; /* smaller height on tablets/phones */
+    min-height: 100vh; /* smaller height on tablets/phones */
   }
 
   .hero h1 {
@@ -468,7 +468,7 @@ nav.active ~ .mobile-menu-btn i.fa-times { transform: rotate(180deg); }
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 60vh;
+    min-height: 100vh;
   }
 
   .hero h1 {
@@ -692,6 +692,7 @@ nav.active ~ .mobile-menu-btn i.fa-times { transform: rotate(180deg); }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  
 }
 
 .featured-scroll-wrapper {
@@ -2456,8 +2457,8 @@ footer .social-icons a i {
 }
 
 .page-numbers span {
-  background: var(--dark-surface-light, #222);
-  color: var(--primary-color, #9d46ff);
+  background: var(--dark-surface-light, #e0dede);
+  color: var(--primary-color, #7e46ff);
   border-radius: 8px;
   padding: 4px 12px;
   font-size: 1rem;
@@ -3132,33 +3133,9 @@ footer .social-icons a i {
     transition: var(--transition-fast);
 }
 
-.view-album-btn {
-  color: var(--text-primary);
-  text-decoration: none;
-  width: 90%;
-  font-size: 0.6rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: var(--transition-fast);
-  margin: 12px auto 0 auto; /* Center and add space above */
-  font-weight: 700;
-  text-align: center;
-  display: block;
-  position: relative;
-  bottom: 20px;
-  border: none;
-
-}
-
-
-.view-album-btn:hover,
-.view-album-btn:focus {
-  color: #fff !important;
-
+.album-info p:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
