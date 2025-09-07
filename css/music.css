@@ -95,7 +95,7 @@ header {
     align-items: center;
     margin-bottom: 1rem;
     /* border: 2px solid red; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-top: 40px;
     
 }
