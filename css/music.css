@@ -91,13 +91,10 @@ header {
     border: 2px solid red;
 } */
 .music-library .search-bar {
-    position: relative;
-    left: 0;
-    right: 0;
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     flex: 1;
     min-width: 200px;
 }
@@ -144,18 +141,12 @@ header {
         flex-direction: column;
     }
 
-    .search-bar {
-        width: 100%;
-        /* margin-bottom: 1rem; */
-    }
-
     .filter-options select {
         margin-left: 0;
         margin-top: 0.5rem;
     }       
         
 }
-
 .pagination {
     display: flex;
     justify-content: center;
