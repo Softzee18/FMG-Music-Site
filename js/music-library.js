@@ -98,7 +98,7 @@ function initPagination() {
   const pageButtons = document.querySelectorAll('.page-numbers span');
   const prevBtn = document.querySelector('.prev-page');
   const nextBtn = document.querySelector('.next-page');
-  const tracksPerPage = 4;
+  const tracksPerPage = 8;
   let currentPage = 1;
   const totalPages = Math.ceil(trackCards.length / tracksPerPage);
   function showPage(page) {
@@ -123,6 +123,114 @@ function initPagination() {
 }
 
 // --- Latest Singles Play/Pause, Download, Share ---
+
+// --- Latest Singles Pagination Fix ---
+let currentPage = 0;
+const tracksPerPage = 8;
+
+function renderTracks() {
+  const allTracks = Array.from(document.querySelectorAll('.track-card'));
+  const grid = document.querySelector('.music-grid');
+  if (!grid) return;
+
+  // hide all
+  allTracks.forEach(card => (card.style.display = 'none'));
+
+  // show only 8
+  const start = currentPage * tracksPerPage;
+  const end = start + tracksPerPage;
+  allTracks.slice(start, end).forEach(card => (card.style.display = 'block'));
+}
+
+// Next button
+document.querySelector('.next-page')?.addEventListener('click', () => {
+  const allTracks = document.querySelectorAll('.track-card').length;
+  const totalPages = Math.ceil(allTracks / tracksPerPage);
+  if (currentPage < totalPages - 1) {
+    currentPage++;
+    renderTracks();
+  }
+});
+
+// Prev button
+document.querySelector('.prev-page')?.addEventListener('click', () => {
+  if (currentPage > 0) {
+    currentPage--;
+    renderTracks();
+  }
+});
+
+// Initial render
+document.addEventListener('DOMContentLoaded', renderTracks);
+
+// const musicGrid = document.querySelector('.music-grid');
+// const trackCards = document.querySelectorAll('.track-card');
+// const prevBtn = document.querySelector('.prev-page');
+// const nextBtn = document.querySelector('.next-page');
+// const pageNumbers = document.querySelector('.page-numbers');
+
+// const itemsPerPage = 8;
+// const totalPages = Math.ceil(trackCards.length / itemsPerPage);
+// let currentPage = 0;
+
+// --- Create page indicators ---
+function renderPageNumbers() {
+  pageNumbers.innerHTML = "";
+  for (let i = 0; i < totalPages; i++) {
+    const span = document.createElement("span");
+    span.textContent = i + 1;
+    if (i === currentPage) span.classList.add("active");
+    span.addEventListener("click", () => scrollToPage(i));
+    pageNumbers.appendChild(span);
+  }
+}
+
+// --- Scroll to page ---
+function scrollToPage(page) {
+  const index = page * itemsPerPage;
+  const card = trackCards[index];
+  if (card) {
+    card.scrollIntoView({ behavior: "smooth", inline: "start" });
+    currentPage = page;
+    updateActivePage();
+  }
+}
+
+// --- Update active page ---
+function updateActivePage() {
+  [...pageNumbers.children].forEach((el, i) => {
+    el.classList.toggle("active", i === currentPage);
+  });
+}
+
+// --- Buttons ---
+nextBtn.addEventListener("click", () => {
+  if (currentPage < totalPages - 1) {
+    scrollToPage(currentPage + 1);
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (currentPage > 0) {
+    scrollToPage(currentPage - 1);
+  }
+});
+
+// --- Detect scroll (manual scroll sync) ---
+musicGrid.addEventListener("scroll", () => {
+  const scrollLeft = musicGrid.scrollLeft;
+  const cardWidth = trackCards[0].offsetWidth + 15; // card + gap
+  const page = Math.round(scrollLeft / (cardWidth * itemsPerPage));
+  if (page !== currentPage) {
+    currentPage = page;
+    updateActivePage();
+  }
+});
+
+// Initialize
+renderPageNumbers();
+
+
 function initSinglesPlayButtons() {
   const playBtns = Array.from(document.querySelectorAll('.track-card .play-btn'));
   const downloadBtns = document.querySelectorAll('.track-card .download-btn');

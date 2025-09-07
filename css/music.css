@@ -1,4 +1,4 @@
-: css/music.css
+:css/music.css
 
 /* Global */
 /* body {
@@ -80,11 +80,26 @@ header {
 }
 
 /* Music Library Section */
-.music-library .library-controls {
+.music-library {
+    background: var(--bg-light);
+}
+/* .music-library .library-controls {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 2rem 0;
+    border: 2px solid red;
+} */
+.music-library .search-bar {
+    position: relative;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    /* border: 2px solid red; */
+    flex: 1;
+    min-width: 200px;
 }
 
 .music-library .search-bar input {
@@ -93,6 +108,7 @@ header {
     border-radius: 5px 0 0 5px;
     width: 250px;
     outline: none;
+    transition: 0.3s;
 }
 
 .music-library .search-bar button {
@@ -115,6 +131,64 @@ header {
     border-radius: 5px;
     border: 1px solid var(--secondary);
 }
+
+@media screen and (max-width: 1024px) {
+    .music-library .search-bar input {
+        width: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .music-library .library-controls {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        width: 100%;
+        /* margin-bottom: 1rem; */
+    }
+
+    .filter-options select {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }       
+        
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.pagination .page-numbers span {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.pagination .page-numbers span.active,
+.pagination .page-numbers span:hover {
+    background: var(--primary);
+    color: var(--text-light);
+    border-color: var(--primary);
+}   
+.pagination .scroll-btn {
+    background: transparent;
+    border: none;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.pagination .scroll-btn:hover {
+    color: var(--primary);
+}
+
+
 
 /* Track Cards */
 .track-container {

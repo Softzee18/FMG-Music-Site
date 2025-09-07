@@ -184,7 +184,7 @@ window.addEventListener('load', () => {
         console.log(`Page load time: ${loadTime}ms`);
     }
 });
-
+// Smooth Scrolling for Featured Section
 const scrollContainer = document.querySelector('.featured-scroll-container');
 const scrollLeftBtn = document.querySelector('.scroll-left');
 const scrollRightBtn = document.querySelector('.scroll-right');
@@ -196,6 +196,7 @@ scrollLeftBtn.addEventListener('click', () => {
 scrollRightBtn.addEventListener('click', () => {
   scrollContainer.scrollBy({ left: 220, behavior: 'smooth' });
 });
+
 // Lazy Load Images
 const lazyImages = document.querySelectorAll('img.lazy');
 
