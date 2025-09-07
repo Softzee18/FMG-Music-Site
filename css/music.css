@@ -434,13 +434,17 @@ track-card {
         margin-left: auto;
         
     }
-    .genere-filter select {
+    .genere-filter  {
         width: 40%;
         margin-top: 0.5rem;
         display: flex;
-        margin-left: auto;  
+        margin-left: auto; 
+        flex-direction: row;
+        align-items: stretch;
+        gap: 0.5rem;
+        border: 2px solid red; 
     }
-    .sort-by select {
+    .sort-by {
         width: 40%;
         margin-top: 0.5rem;
         display: flex;
