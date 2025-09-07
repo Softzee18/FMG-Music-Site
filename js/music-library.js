@@ -143,35 +143,40 @@ function renderTracks() {
 }
 
 // Next button
-document.querySelector('.next-page')?.addEventListener('click', () => {
-  const allTracks = document.querySelectorAll('.track-card').length;
-  const totalPages = Math.ceil(allTracks / tracksPerPage);
-  if (currentPage < totalPages - 1) {
-    currentPage++;
-    renderTracks();
-  }
-});
+// document.querySelector('.next-page')?.addEventListener('click', () => {
+//   const allTracks = document.querySelectorAll('.track-card').length;
+//   const totalPages = Math.ceil(allTracks / tracksPerPage);
+//   if (currentPage < totalPages - 1) {
+//     currentPage++;
+//     renderTracks();
+//   }
+// });
 
-// Prev button
-document.querySelector('.prev-page')?.addEventListener('click', () => {
-  if (currentPage > 0) {
-    currentPage--;
-    renderTracks();
-  }
-});
+// // Prev button
+// document.querySelector('.prev-page')?.addEventListener('click', () => {
+//   if (currentPage > 0) {
+//     currentPage--;
+//     renderTracks();
+//   }
+// });
 
 // Initial render
 document.addEventListener('DOMContentLoaded', renderTracks);
 
-// const musicGrid = document.querySelector('.music-grid');
-// const trackCards = document.querySelectorAll('.track-card');
-// const prevBtn = document.querySelector('.prev-page');
-// const nextBtn = document.querySelector('.next-page');
-// const pageNumbers = document.querySelector('.page-numbers');
-
-// const itemsPerPage = 8;
-// const totalPages = Math.ceil(trackCards.length / itemsPerPage);
+// --- Horizontal Scroll Pagination ---
+const musicGrid = document.querySelector('.music-grid');
+const trackCards = document.querySelectorAll('.track-card');
+const pageNumbers = document.querySelector('.page-numbers');
+const nextBtn = document.querySelector('.next-page');
+const prevBtn = document.querySelector('.prev-page');
+const itemsPerPage = 8;
+const totalPages = Math.ceil(trackCards.length / itemsPerPage);
 // let currentPage = 0;
+if (musicGrid && trackCards.length > 0 && pageNumbers && nextBtn && prevBtn) {
+  renderPageNumbers();
+  scrollToPage(0);
+}
+
 
 // --- Create page indicators ---
 function renderPageNumbers() {
@@ -217,15 +222,15 @@ prevBtn.addEventListener("click", () => {
 });
 
 // --- Detect scroll (manual scroll sync) ---
-musicGrid.addEventListener("scroll", () => {
-  const scrollLeft = musicGrid.scrollLeft;
-  const cardWidth = trackCards[0].offsetWidth + 15; // card + gap
-  const page = Math.round(scrollLeft / (cardWidth * itemsPerPage));
-  if (page !== currentPage) {
-    currentPage = page;
-    updateActivePage();
-  }
-});
+// musicGrid.addEventListener("scroll", () => {
+//   const scrollLeft = musicGrid.scrollLeft;
+//   const cardWidth = trackCards[0].offsetWidth + 15; // card + gap
+//   const page = Math.round(scrollLeft / (cardWidth * itemsPerPage));
+//   if (page !== currentPage) {
+//     currentPage = page;
+//     updateActivePage();
+//   }
+// });
 
 // Initialize
 renderPageNumbers();
@@ -742,3 +747,4 @@ audio.addEventListener('ended', () => {
     currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
     loadTrack(tracks[currentTrackIndex]);
 });
+// ================= End Audio Player =================
